@@ -137,18 +137,12 @@ function PortfolioDetailsHeader() {
           <i className={`bi ${menuOpen ? 'bi-x' : 'bi-list'}`}></i>
         </button>
         <div className="header-social-links">
-          <a href="#" className="twitter" title="Twitter">
-            <i className="bi bi-twitter"></i>
-          </a>
-          <a href="#" className="facebook" title="Facebook">
-            <i className="bi bi-facebook"></i>
-          </a>
-          <a href="#" className="instagram" title="Instagram">
-            <i className="bi bi-instagram"></i>
-          </a>
-          <a href="#" className="linkedin" title="LinkedIn">
-            <i className="bi bi-linkedin"></i>
-          </a>
+        <a href="https://x.com/" className="twitter"><i className="bi bi-twitter"></i></a>
+          <a href="https://www.facebook.com/harshavivek.nani?mibextid=ZbWKwL" className="facebook"><i className="bi bi-facebook"></i></a>
+          <a href="https://github.com/Harsha-vivek03" className="github"><i class="fa-brands fa-github"></i></a>
+          
+          <a href="https://www.linkedin.com/in/harsha-vivek-a47309243" className="linkedin"><i className="bi bi-linkedin"></i></a>
+       
         </div>
       </div>
     </header>
@@ -178,7 +172,7 @@ const ProjectDetails = () => {
   
         <div className="d-flex flex-column">
           {/* Left Column: Carousel */}
-          <div className="col-9 align-self-center">
+          <div className=" align-self-center">
             <Carousel className="my-4">
               {project.images.map((image, index) => (
                 <Carousel.Item key={index}>

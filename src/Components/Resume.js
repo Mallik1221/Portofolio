@@ -167,7 +167,7 @@ const Resume = () => {
           <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 className="resume-title">Experience</h3>
             <div className="resume-item">
-              <h4>Front End Web Developer</h4>
+              <h4>Front End Web Developer Intern</h4>
               <h5>2023- Present</h5>
               <p><em>JNTUGV College</em></p>
               <p>Led the design and deployment of a responsive JNTUGV website using HTML5, CSS3, JavaScript, Material-UI, and React.js. Ensured a seamless user experience with 99% uptime and real-time updates, earning positive feedback from over 2,000 users.</p>
