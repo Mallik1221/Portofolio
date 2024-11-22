@@ -1,0 +1,121 @@
+/* General styles */
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: #fff;
+} */
+.section-title h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top:50px;
+    color: #444;
+    text-align: center;
+  }
+.contact {
+    display: flex;
+    flex-direction: column; /* Change to column for default layout */
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.c-leftdiv,
+.c-rightdiv {
+    width: 90%; /* Default to full width */
+    margin: 10px 0; /* Add some margin for spacing */
+    padding: 2%;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.c-leftdiv button {
+    font-size: 1.4rem;
+    width: 100%;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add a transition for hover effect */
+}
+
+.c-leftdiv button:hover {
+    background-color: #0056b3;
+}
+
+.c-rightdiv {
+    text-align: center; /* Center-align content */
+}
+
+.c-rightdiv h1 {
+    color: #ff6347;
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.c-rightdiv p {
+    color: #dcdcdc;
+    font-size: 1.2rem; /* Adjusted font size for better readability on small screens */
+    margin-bottom: 20px; /* Add some space below each paragraph */
+}
+
+a {
+    text-decoration: none;
+}
+
+.icons {
+    margin: 10px 15px; /* Adjusted margin for better spacing */
+    font-size: 2.5rem;
+    color: #0056b3;
+    transition: color 0.3s; /* Add a transition for hover effect */
+}
+
+.icons:hover {
+    color: #ff4500; /* Change color on hover */
+}
+
+/* Media queries for larger screens */
+@media (min-width: 769px) {
+    .contact {
+        flex-direction: row; /* Change to row for larger screens */
+    }
+
+    .c-leftdiv,
+    .c-rightdiv {
+        width: 40%; /* Adjust width for larger screens */
+    }
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .c-leftdiv,
+    .c-rightdiv {
+        width: 100%; /* Full width for smaller screens */
+        padding: 10px; /* Adjust padding for better spacing */
+    }
+
+    .c-leftdiv button {
+        font-size: 1.2rem; /* Adjust button font size */
+        padding: 15px; /* Add padding for larger clickable area */
+    }
+
+    .c-rightdiv p {
+        font-size: 1.2rem; /* Adjust text size */
+    }
+
+    .icons {
+        font-size: 2rem; /* Adjust icon size */
+        margin: 10px 4px; /* Adjust margin for better spacing */
+    }
+}

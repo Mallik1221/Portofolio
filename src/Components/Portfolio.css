@@ -1,0 +1,149 @@
+
+  
+  .portfolio {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .section-title p {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .isotope-layout {
+    margin-top: 30px;
+  }
+  
+  .portfolio-filters {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .portfolio-filters li {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 8px 15px;
+    border-radius: 50px;
+    background: #f7f7f7;
+    color: #444;
+    transition: 0.3s;
+  }
+  
+  .portfolio-filters li:hover,
+  .portfolio-filters .filter-active {
+    background: #4e54c8;
+    color: #fff;
+  }
+  
+  .portfolio-item {
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .portfolio-item img {
+    width: 100%;
+    height: auto;
+    transition: all 0.4s ease;
+  }
+  
+  .portfolio-info {
+    background: rgba(34, 34, 34, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .portfolio-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .portfolio-item:hover .portfolio-info {
+    opacity: 1;
+  }
+  
+  .portfolio-info h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .portfolio-info p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .portfolio-info .glightbox,
+  .portfolio-info .details-link {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .portfolio-info .glightbox:hover,
+  .portfolio-info .details-link:hover {
+    color: #4e54c8;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 991px) {
+    .portfolio-item {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .portfolio-filters li {
+      margin: 0 5px;
+      padding: 6px 12px;
+    }
+  
+    .portfolio-info {
+      padding: 15px;
+    }
+  
+    .portfolio-info h4 {
+      font-size: 18px;
+    }
+  
+    .portfolio-info p {
+      font-size: 13px;
+    }
+  
+    .portfolio-info .glightbox,
+    .portfolio-info .details-link {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .section-title h2 {
+      font-size: 28px;
+    }
+  
+    .portfolio-info h4 {
+      font-size: 16px;
+    }
+  
+    .portfolio-info p {
+      font-size: 12px;
+    }
+  }
+  
