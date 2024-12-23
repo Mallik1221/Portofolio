@@ -142,6 +142,42 @@ const Resume = () => {
       <div className="container">
 
       <div className="row">
+          
+
+          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 className="resume-title">Experience</h3>
+             
+             
+
+
+
+
+            <div className="resume-item">
+              <h4>Front End Web Developer Intern</h4>
+              <h5>2023- Present</h5>
+              <p><em>JNTUGV College</em></p>
+              <p>Led the design and deployment of a responsive JNTUGV website using HTML5, CSS3, JavaScript, Material-UI, and React.js. Ensured a seamless user experience with 99% uptime and real-time updates, earning positive feedback from over 2,000 users.</p>
+            </div>
+
+            <div className="resume-item">
+    <h4>Java Full Stack Intern</h4>
+    <h5>2024</h5>
+    <p><em>Infosys Springboard</em></p>
+    <p>This was a 3-month project-based virtual internship where I developed full-stack applications using Java technologies. The experience enhanced my skills in both front-end and back-end development while collaborating on team projects.</p>
+</div>
+            <div className="resume-item">
+              <h4>Web Development Intern</h4>
+              <h5>2024</h5>
+              <p><em>Brain O Vision</em></p>
+              <p>During my 2-month internship at Brain O Vision, I gained valuable experience in responsive web design and various web development tools, including Canvas, Bootstrap, and WordPress. I also completed daily assessments that helped solidify my understanding and skills.</p>
+            </div>
+            <div className="resume-item">
+              <h4>Front End Development Intern</h4>
+              <h5>2023</h5>
+              <p><em>IBM</em></p>
+              <p>During my 6 weeks IBM internship, I learned React.js and Bootstrap, and gained insights into collaborative practices.</p>
+            </div>
+          </div>
           <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 className="resume-title">Education</h3>
             <div className="resume-item">
@@ -161,28 +197,6 @@ const Resume = () => {
               <h5>2019</h5>
               <p><em>Nagaraja Municipal High School, Rajahmundry</em></p>
               <p>Achieved a solid academic foundation with a focus on science and mathematics, setting the stage for further studies in engineering.</p>
-            </div>
-          </div>
-
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 className="resume-title">Experience</h3>
-            <div className="resume-item">
-              <h4>Front End Web Developer Intern</h4>
-              <h5>2023- Present</h5>
-              <p><em>JNTUGV College</em></p>
-              <p>Led the design and deployment of a responsive JNTUGV website using HTML5, CSS3, JavaScript, Material-UI, and React.js. Ensured a seamless user experience with 99% uptime and real-time updates, earning positive feedback from over 2,000 users.</p>
-            </div>
-            <div className="resume-item">
-              <h4>Web Development Intern</h4>
-              <h5>2024</h5>
-              <p><em>Brain O Vision</em></p>
-              <p>During my 2-month internship at Brain O Vision, I gained valuable experience in responsive web design and various web development tools, including Canvas, Bootstrap, and WordPress. I also completed daily assessments that helped solidify my understanding and skills.</p>
-            </div>
-            <div className="resume-item">
-              <h4>Front End Development Intern</h4>
-              <h5>2023</h5>
-              <p><em>IBM</em></p>
-              <p>During my 6 weeks IBM internship, I learned React.js and Bootstrap, and gained insights into collaborative practices.</p>
             </div>
           </div>
         </div>
@@ -209,13 +223,19 @@ const Resume = () => {
         <div className="row certifications-section" data-aos="fade-up" data-aos-delay="400">
           <h3 className="resume-title">Certifications</h3>
           <div className="col-lg-12">
-              <Carousel>
+              <Carousel
+               animation="fade" // Animation type (can be 'slide' or 'fade')
+               interval={2000} // Time in milliseconds between automatic transitions
+               duration={1000} 
+               
+               >
                 {certificationsData.map((cert, index) => (
                   <div className="certification-item" key={index}>
                     <h4>{cert.name}</h4>
                     <h5>{cert.year}</h5>
                     <p><em>{cert.company}</em></p>
                     <p>{cert.description}</p>
+                    <p><i class="fa-regular fa-image"></i> <i class="fa-solid fa-arrow-down"></i></p>
                     <img
                       src={cert.image}
                       alt={cert.name}

@@ -56,14 +56,8 @@ const About = () => {
             <p>Web Developer with a passion for creating amazing user experiences.</p>
           </div>
           <div className="row">
-            <div className="col-lg-4">
-              <img
-                src={harsha1}
-                alt="About"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-lg-8">
+           
+            
               <div className="content">
                 <h3 className="content-title">Hi, I'm Androthu Harsha Vivek Gangadhar</h3>
                 <p className="fst-italic">
@@ -101,7 +95,7 @@ const About = () => {
 support organizational goals. I’m eager to contribute to innovative projects and collaborate across teams to
 drive both technical and business growth..</p>
               </div>
-            </div>
+           
           </div>
 
           {/* Skills Section */}

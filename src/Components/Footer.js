@@ -5,7 +5,6 @@ function Footer() {
   return (
     <footer id="footer" className="footer">
       <div className="container">
-        
         <div className="footer-bottom">
         <div className="row justify-content-center text-center"> {/* Center the content */}
           <div className="col-12 footer-info">
@@ -21,7 +20,7 @@ function Footer() {
             </div>
           </div>
         </div>
-          <p>Designed & Developed by <a href="https://www.example.com">Harsha</a></p>
+          <p>Designed & Developed by <a href="#">Harsha</a></p>
         </div>
       </div>
     </footer>

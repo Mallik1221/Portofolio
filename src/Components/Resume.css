@@ -12,7 +12,7 @@
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #444;
+  color: #ff9f43;
   text-align: center;
 }
 
@@ -91,7 +91,9 @@
   margin-bottom: 20px;
   transition: transform 0.2s ease-in-out;
 }
-
+.certification-item p i{
+  font-size:20px;
+}
 .certification-item:hover {
   transform: translateY(-5px);
 }

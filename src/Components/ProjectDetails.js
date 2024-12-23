@@ -1,6 +1,6 @@
 
 import { useParams } from "react-router-dom";
-import Carousel from "react-bootstrap/Carousel"; // Using React-Bootstrap for the carousel
+import Carousel from 'react-material-ui-carousel';// Using React-Bootstrap for the carousel
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap styles
 import "./ProjectDetails.css"; // Import custom styles
 import React, { useState, useEffect } from 'react';
@@ -28,7 +28,7 @@ import portfolio3 from "../assets/img/portfolio3.png"
 import library1 from "../assets/img/library1.png"
 import library2 from "../assets/img/library2.png"
 import library3 from "../assets/img/library3.png"
-
+import Button from '@mui/material/Button';
 
 
 // Mock data for demonstration
@@ -63,14 +63,15 @@ const projectData = {
     },
     "resucraft": {
       title: "ResuCraft/ResuMate",
-      description: `ResuCraft (also known as ResuMate) is a user-friendly web application designed to simplify the process of creating professional resumes. 
-      The application allows users to select templates, input their details, and generate polished resumes in PDF format, all in a few simple steps.`,
+     "description": `ResuCraft (also known as ResuMate) is a collaborative web application project designed to simplify the process of creating professional resumes. 
+  As a frontend developer on the team, I contributed to building the user interface and interactive components of the application. 
+  The platform allows users to select templates, input their details, and generate polished resumes in PDF format, all in a few simple steps.`,
       features: [
         "Customizable templates for personalized resumes.",
         "Easy-to-use input fields for quick data entry.",
         "PDF generation for offline use and sharing."
       ],
-      techStack: ["ReactJS", "Node.js", "HTML5", "CSS3"],
+      techStack: ["ReactJS", "Django", "HTML5", "CSS3"],
       images: [resucraft1, resucraft3, resucraft2], // Replace with actual paths
       liveLink: "https://resucraft.vercel.app",
     },
@@ -127,7 +128,8 @@ function PortfolioDetailsHeader() {
             <li>
               <Link to="/" onClick={closeMenu}>
                 
-              <button type="button" class="btn btn-primary text-white">Home</button>
+             
+              <Button variant="outlined">Home</Button>
               
               </Link>
             </li>
@@ -167,31 +169,35 @@ const ProjectDetails = () => {
         <PortfolioDetailsHeader />
         <br />
         <br />
-  
+
         <h1 className="text-center mt-4">{project.title}</h1>
-  
+
         <div className="d-flex flex-column">
           {/* Left Column: Carousel */}
-          <div className=" align-self-center">
-            <Carousel className="my-4">
+          <div className="carousel-container align-self-center">
+            <Carousel
+              animation="fade"
+              interval={2000}
+              duration={700}
+            >
               {project.images.map((image, index) => (
-                <Carousel.Item key={index}>
+                <div key={index} className="carousel-slide">
                   <img
-                    className="d-block w-100"
                     src={image}
-                    alt={`Slide ${index + 1}`}
+                    alt={`Project ${index + 1}`}
+                    className="carousel-image"
                   />
-                </Carousel.Item>
+                </div>
               ))}
             </Carousel>
           </div>
-  
+
           {/* Right Column: Project Details */}
-          <div className="">
+          <div className="project-info">
             <div className="description mt-4">
               <h3>About the Project</h3>
               <p>{project.description}</p>
-  
+
               {project.features && (
                 <>
                   <h4>Key Features:</h4>
@@ -202,7 +208,7 @@ const ProjectDetails = () => {
                   </ul>
                 </>
               )}
-  
+
               {project.techStack && (
                 <>
                   <h4>Tech Stack:</h4>
@@ -214,8 +220,7 @@ const ProjectDetails = () => {
                 </>
               )}
             </div>
-  
-            {/* Live Link */}
+
             {project.liveLink && (
               <div className="text-center mt-4">
                 <a
@@ -232,7 +237,6 @@ const ProjectDetails = () => {
         </div>
       </div>
     );
-  };
-  
+};
 
 export default ProjectDetails;
