@@ -113,7 +113,7 @@ const PortfolioItem = ({ category, imgSrc, title, description, github, detailsRo
         <p>{description}</p>
         <a href={github} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
           GitHub <i className="bi bi-github"></i>
-        </a>
+        </a> 
         <button
           className="btn btn-secondary"
           onClick={() => navigate(detailsRoute)}

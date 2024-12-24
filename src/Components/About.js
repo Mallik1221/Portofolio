@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './About.css';
-import harsha1 from '../assets/img/resume_pic.png'
+
 
 const About = () => {
   // Dynamic skills array
@@ -70,11 +70,15 @@ const About = () => {
                   </li>
                   <li>
                     <i className="fas fa-envelope"></i>
-                    <strong>Email:</strong> <span>hvgnani79813@gmail.com</span>
+                    <strong>Email:</strong> <span> <a href="mailto:hvgnani79813@gmail.com?subject=Regarding Your Portfolio&body=Hello Harsha, I just went through your portfolio and would like to connect with you.">
+      hvgnani79813@gmail.com
+    </a>
+                    </span>
                   </li>
                   <li>
                     <i className="fas fa-phone"></i>
-                    <strong>Phone:</strong> <span>+91 9550617522</span>
+                    <strong>Phone:</strong> <span><a href="tel:+919550617522">+91 9550617522</a>
+                    </span>
                   </li>
                   <li>
                   <i class="fa-brands fa-google-scholar"></i>

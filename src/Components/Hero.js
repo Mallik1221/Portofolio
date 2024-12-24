@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
@@ -9,15 +9,17 @@ import Portfolio from './Portfolio';
 import Contact from './Contact';
 import Header from './Header';
 import harsha1 from '../assets/img/resume_pic.png';
+
+import React from "react";
+
+
+
+
 const Hero = () => {
   const [activeSection, setActiveSection] = useState('');
-
-
-
-
-
-
-
+  const phoneNumber = "+919550617522"; 
+  const defaultMessage = "Hello Harsha! I just went through your portfolio and I'd like to connect with you."; 
+  const whatsAppLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -481,10 +483,6 @@ const Hero = () => {
   }
   
   
-  
-  
-  
-
   return (
     <div>
       <Header />
@@ -530,6 +528,28 @@ const Hero = () => {
       <section id="contact">
         <Contact />
       </section>
+
+      <div >
+      <a
+        href={whatsAppLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          textDecoration: "none",
+          color: "#25D366", // WhatsApp green color
+        }}
+      >
+        <img
+        className="whatsapp"
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+          style={{ width: "54px", height: "54px", marginRight: "8px" }}
+        />
+      </a>
+    </div>
+
     </div>
   );
 };

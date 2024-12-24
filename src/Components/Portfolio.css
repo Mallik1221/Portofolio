@@ -103,6 +103,9 @@
   .portfolio-info .details-link:hover {
     color: #4e54c8;
   }
+  .portfolio-info .btn-secondary{
+    height: 2.7em;
+  }
   
   /* Responsive styles */
   @media (max-width: 991px) {
