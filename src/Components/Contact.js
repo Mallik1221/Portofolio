@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareFacebook, faLinkedin, faSquareGithub, faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 import emailjs from 'emailjs-com';
@@ -12,11 +12,11 @@ function TextControlsExample({ formRef, handleSubmit }) {
     <Form ref={formRef} onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Name</Form.Label>
-        <Form.Control type="text" name="user_name"  placeholder="Enter your name" required />
+        <Form.Control type="text" name="user_name" placeholder="Enter your name" required />
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" name="user_email"  placeholder="example@gmail.com" required />
+        <Form.Control type="email" name="user_email" placeholder="example@gmail.com" required />
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
         <Form.Label>Message</Form.Label>
@@ -29,14 +29,39 @@ function TextControlsExample({ formRef, handleSubmit }) {
 
 const Contact = () => {
   const formRef = useRef();
+  const [formData, setFormData] = useState({
+    user_name: '',
+    user_email: '',
+    message: ''
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Setting the template params from the formData state
+    const templateParams = {
+      user_name: formData.user_name,
+      user_email: formData.user_email,
+      message: formData.message
+    };
 
     emailjs.sendForm('service_idffv7s', 'template_m0qw49q', formRef.current, 'e4HgT1jXbsGvpfUJg')
       .then((result) => {
         alert("Thank you for visiting my profile, I will reach you soon 🤗");
         formRef.current.reset();
+        setFormData({
+          user_name: '',
+          user_email: '',
+          message: ''
+        });
       }, (error) => {
         console.log(error.text);
         alert("An error occurred, please try again later.");
@@ -50,7 +75,6 @@ const Contact = () => {
         <p>Let's Connect! I'm always open to discussing new opportunities, collaborations, or projects. Feel free to reach out!</p>
       </div>
       <div className="contact">
-     
         <div className="c-leftdiv">
           <TextControlsExample formRef={formRef} handleSubmit={handleSubmit} />
         </div>
@@ -62,7 +86,6 @@ const Contact = () => {
           <a href="https://www.facebook.com/profile.php?id=100041112729671"><FontAwesomeIcon className="icons" icon={faSquareFacebook} /></a>
           <a href="https://www.linkedin.com/in/bksssmallik"><FontAwesomeIcon className="icons" icon={faLinkedin} /></a>
           <a href="https://github.com/Mallik1221"><FontAwesomeIcon className="icons" icon={faSquareGithub} /></a>
-          {/* <a href="https://www.instagram.com/the_hidden_hate?igsh=MTJsdTBxeDJlczU0cQ=="><FontAwesomeIcon className="icons" icon={faSquareInstagram} /></a> */}
         </div>
       </div>
     </div>
