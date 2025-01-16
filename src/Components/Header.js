@@ -54,7 +54,7 @@ function Header() {
     <header id="header" className="header d-flex align-items-center sticky-top">
       <div className="container-fluid d-flex align-items-center justify-content-between">
         <Link to="/" className="logo d-flex align-items-center">
-          <h1 className="sitename">Harsha</h1>
+          <h1 className="sitename">Mallik</h1>
         </Link>
         <nav className={`navmenu ${menuOpen ? 'open' : ''}`}>
           <ul>
@@ -74,11 +74,11 @@ function Header() {
           <i className={`bi ${menuOpen ? 'bi-x' : 'bi-list'}`}></i>
         </button>
         <div className="header-social-links">
-          <a href="https://x.com/" className="twitter"><i className="bi bi-twitter"></i></a>
-          <a href="https://www.facebook.com/harshavivek.nani?mibextid=ZbWKwL" className="facebook"><i className="bi bi-facebook"></i></a>
-          <a href="https://github.com/Harsha-vivek03" className="github"><i class="fa-brands fa-github"></i></a>
+          {/* <a href="https://x.com/" className="twitter"><i className="bi bi-twitter"></i></a> */}
+          <a href="https://www.facebook.com/profile.php?id=100041112729671" className="facebook"><i className="bi bi-facebook"></i></a>
+          <a href="https://github.com/Mallik1221" className="github"><i class="fa-brands fa-github"></i></a>
           
-          <a href="https://www.linkedin.com/in/harsha-vivek-a47309243" className="linkedin"><i className="bi bi-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/bksssmallik" className="linkedin"><i className="bi bi-linkedin"></i></a>
         </div>
       </div>
     </header>

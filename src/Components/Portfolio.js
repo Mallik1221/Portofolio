@@ -1,6 +1,10 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import for routing
+import CertiTrack from "../assets/img/Certitrack.jpg"
+import Portfolioo from "../assets/img/personalportfolio.jpg";
+import powerfit from "../assets/img/powerfit.jpg";
+
 import issue1 from "../assets/img/issue1.png";
 import library from "../assets/img/library.png";
 import portfolio from "../assets/img/portfolio.png";
@@ -20,48 +24,30 @@ const Portfolio = () => {
     {
       id: 1,
       category: "filter-app",
-      imgSrc: jntugv,
-      title: "JNTUGV Website",
-      description: "Developed and deployed a Real Time University website for JNTUGV",
-      github: "https://github.com/Jntu-Gurajada-Vizianagaram/JNTU-GV",
-      detailsRoute: "/projects/jntugv-website",
+      imgSrc: CertiTrack,
+      title: "CertiTrack – Smart India Hackathon 2024",
+      description: "Desgined and Developed CertiTrack, a project aimed at optimizing the issuance of caste and other certificates by the Revenue Department.",
+      github: "https://github.com/Sivakalki/SIH",
+      detailsRoute: "/projects/SIH-website",
     },
     {
       id: 2,
       category: "filter-product",
-      imgSrc: issue1,
-      title: "Issue Tracking System",
-      description: "A java full stack project for tracking and managing different types of issues",
-      github: "https://github.com/Harsha-vivek03/IssueTrackingSystem",
-      detailsRoute: "/projects/issue-tracking-system",
+      imgSrc: Portfolioo,
+      title: "Personal Portfolio",
+      description: "An interactive and visually appealing portfolio website created to showcase my skills, projects, and professional experiences as a front-end developer.",
+      github: "https://github.com/Mallik1221/Myportfolio",
+      detailsRoute: "/projects/portfolio",
     },
     {
       id: 3,
       category: "filter-branding",
-      imgSrc: resucraft,
-      title: "ResuCraft",
+      imgSrc: powerfit,
+      title: "PowerFit - Gym Landing Page",
       description: "Collaboratively developed a free online resume builder to make resumes with ease.",
       github: "https://github.com/Harsha-vivek03/ResuCraft",
-      detailsRoute: "/projects/resucraft",
-    },
-    {
-      id: 4,
-      category: "filter-branding",
-      imgSrc: portfolio,
-      title: "Personal Portfolio",
-      description: "My personal portfolio built with ReactJS, fully responsive.",
-      github: "https://github.com/Harsha-vivek03/personalportfolio",
-      detailsRoute: "/projects/portfolio",
-    },
-    {
-      id: 5,
-      category: "filter-branding",
-      imgSrc: library,
-      title: "E-Library",
-      description: "Built a front-end for E-Library using basic HTML and CSS.",
-      github: null,
-      detailsRoute: "/projects/E-library",
-    },
+      detailsRoute: "/projects/Gym-landing-page",
+    }
   ];
 
   return (

@@ -59,10 +59,10 @@ const Contact = () => {
           <p>Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you. Simply fill the form and send me an email.</p>
           <p>You can also reach me through...</p>
           <br />
-          <a href="https://www.facebook.com/harshavivek.nani?mibextid=ZbWKwL"><FontAwesomeIcon className="icons" icon={faSquareFacebook} /></a>
-          <a href="https://www.linkedin.com/in/harsha-vivek-a47309243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FontAwesomeIcon className="icons" icon={faLinkedin} /></a>
-          <a href="https://github.com/Harsha-vivek03"><FontAwesomeIcon className="icons" icon={faSquareGithub} /></a>
-          <a href="https://www.instagram.com/the_hidden_hate?igsh=MTJsdTBxeDJlczU0cQ=="><FontAwesomeIcon className="icons" icon={faSquareInstagram} /></a>
+          <a href="https://www.facebook.com/profile.php?id=100041112729671"><FontAwesomeIcon className="icons" icon={faSquareFacebook} /></a>
+          <a href="https://www.linkedin.com/in/bksssmallik"><FontAwesomeIcon className="icons" icon={faLinkedin} /></a>
+          <a href="https://github.com/Mallik1221"><FontAwesomeIcon className="icons" icon={faSquareGithub} /></a>
+          {/* <a href="https://www.instagram.com/the_hidden_hate?igsh=MTJsdTBxeDJlczU0cQ=="><FontAwesomeIcon className="icons" icon={faSquareInstagram} /></a> */}
         </div>
       </div>
     </div>

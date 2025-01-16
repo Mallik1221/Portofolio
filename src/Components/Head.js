@@ -48,7 +48,7 @@ function Head() {
     <header id="header" className="header d-flex align-items-center light-background sticky-top">
       <div className="container-fluid d-flex align-items-center justify-content-between">
         <Link to="/" className="logo d-flex align-items-center">
-          <h1 className="sitename">Harsha</h1>
+          <h1 className="sitename">Mallik</h1>
         </Link>
         <nav className={`navmenu ${menuOpen ? 'open' : ''}`}>
           <ul>

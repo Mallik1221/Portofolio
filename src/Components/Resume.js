@@ -5,91 +5,67 @@ import './Resume.css';
 import { Modal, Box, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import Carousel from 'react-material-ui-carousel';
-import kaggle from "../assets/img/kaggle.png";
-import fedpro from "../assets/img/fedpro.png";
-import dsa from "../assets/img/dsa-infosys.png";
-import se from "../assets/img/se-agile.png";
-import Nosql from "../assets/img/nosql-infosys.png";
-import java from "../assets/img/java-oracle.png";
-import js from "../assets/img/javascript.png";
-import sql from "../assets/img/sql-datascience.png";
-import ibmfed from "../assets/img/ibm-fed.png";
-import workshop from "../assets/img/workshop.jpg";
+import exp from "../assets/img/Incrivelsoft_exp.jpg";
+import bda from "../assets/img/Big_data.jpg";
+import se from "../assets/img/edunetIBM.jpg";
+import Nosql from "../assets/img/Steel_plant.jpg";
+import js from "../assets/img/AWS_CERTIFICATE.jpg";
+import sql from "../assets/img/English_certi.jpg";
+import workshop from "../assets/img/NPTEL.jpg";
 import { Button } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
-import resume from "../assets/Harsha_Vivek_SDE.pdf"
+import resume from "../assets/BKSSSMALLIK-RESUME.pdf"
 const certificationsData = [
   {
-    name: "Professional Front-End Developer",
-    company: "edX | The World Wide Web Consortium (W3C)",
+    name: "Experience Certificate",
+    company: "IncrivelSoft Pvt. Ltd.",
     year: "2024",
-    description: "Gained expertise in front-end development through a comprehensive program. Mastered HTML5, CSS, and JavaScript, along with web development best practices, focusing on modern web standards and accessibility.",
-    image: fedpro
+    description: "This certificate acknowledges the successful completion of a freelance role as a Web Developer & Designer at IncrivelSoft Pvt. Ltd. from August 13, 2024, to November 2, 2024. B Kumara Siddi Satya Sai Mallik was recognized for his professionalism, consistency, and valuable contributions during the tenure.",
+    image: exp
   },
   {
-    name: "Data Structures and Algorithms using Java",
-    company: "Infosys | Springboard",
+    name: "Big Data, Hadoop, and Spark Basics",
+    company: "edX | IBM",
     year: "2024",
-    description: "Acquired in-depth knowledge of data structures and algorithms, focusing on efficient data storage and manipulation. Learned to implement various algorithms in Java, optimizing code performance.",
-    image: dsa
+    description: "Successfully completed the Big Data, Hadoop, and Spark Basics course, offered by IBM through their online learning initiative, with a passing grade.",
+    image: bda
   },
   {
-    name: "Software Engineering and Agile Software Development ",
-    company: "Infosys | Springboard",
+    name: "Internship Certificate - Emerging Technologies (AI & Cloud) ",
+    company: "Edunet Foundation in collaboration | AICTE",
     year: "2024",
-    description: "Developed a strong understanding of software engineering principles and Agile methodologies. Learned to manage software projects, collaborate in teams, and implement Agile practices for iterative development.",
+    description: " Awarded for successfully completing a 4-week internship focused on leveraging SkillsBuild & IBM Cloud Platform in Emerging Technologies (AI & Cloud) from February 21, 2024, to March 20, 2024.",
     image: se
   },
   {
-    name: "Introduction to NoSQL Databases",
-    company: "Infosys | Springboard",
+    name: "Full stack development - J2EE",
+    company: "Rashtriya Ispat Nigam Limited | Steelplant",
     year: "2024",
-    description: "Gained knowledge of NoSQL database concepts and their applications. Learned about different types of NoSQL databases, including document, key-value, and graph databases, and how to design and query them.",
+    description: "This certificate acknowledges the successful completion of the Full Stack Development program focused on J2EE technologies. The program provided hands-on experience in building scalable web applications using Java, JSP, Servlets, and other enterprise-level technologies. The training at Rashtriya Ispat Nigam Limited | Steelplant emphasized both front-end and back-end development, equipping the participant with a comprehensive understanding of full-stack development processes.",
     image: Nosql
   },
 
   {
-    name: "SQL for Data Science",
-    company: "edX | IBM",
+    name: "Professional Certificate in English Communication Skills",
+    company: "edX | TsinghuaX ",
     year: "2024",
-    description: "Developed proficiency in SQL for data manipulation and analysis. Learned to write complex queries to extract insights from databases, perform data aggregation, and utilize SQL functions in data science applications.",
+    description: "Completed a Professional Certificate in English Communication Skills, achieving passing grades in all courses as part of the program offered by TsinghuaX in collaboration with edX.",
     image: sql
   },
   {
-    name: "JavaScript Introduction",
-    company: "edX | The World Wide Web Consortium (W3C)",
+    name: "AWS Cloud Practitioner Essentials",
+    company: "edX | AWS",
     year: "2024",
-    description: "Acquired foundational knowledge of JavaScript, focusing on core programming concepts. Learned to implement interactive features in web pages and manage data using variables, functions, and event handling.",
+    description: "This certificate confirms the successful completion and passing grade in the AWS Cloud Practitioner Essentials course, offered by AWS through its online learning initiative.",
     image: js
   },
   {
-    name: "ReactJs Workshop | Certificate of Appreciation",
-    company: "JNTUGV | ITYUKTA",
+    name: "Data Science for Engineers",
+    company: "NPTEL",
     year: "2024",
-    description: "Served as a resource person for a ReactJS workshop, instructing and mentoring students on building dynamic user interfaces with React. Provided hands-on experience by guiding students in developing their personal portfolios.",
+    description: "This certificate validates the successful completion of the Data Science for Engineers course offered by NPTEL. The course provided an in-depth understanding of key data science concepts such as data exploration, analysis, visualization, machine learning algorithms, and statistical modeling. It equipped participants with the skills necessary to implement data-driven solutions and analyze large datasets to make informed decisions in engineering contexts.",
     image: workshop
-  },
-  {
-    name: "FED Internship completion Certificate",
-    company: "edunet | IBM Skillbuild",
-    year: "2024",
-    description: "Acquired foundational knowledge of JavaScript, focusing on core programming concepts. Learned to implement interactive features in web pages and manage data using variables, functions, and event handling.",
-    image: ibmfed
-  },
-  {
-    name: "Python",
-    company: "Kaggle",
-    year: "2024",
-    description: "Gained foundational Python skills for data science, including data structures, functions, and basic data analysis with Pandas and NumPy",
-    image: kaggle
-  },
-  {
-    name: "Java Foundation ",
-    company: "Oracle",
-    year: "2024",
-    description: "Gained a strong understanding of Java programming fundamentals. Learned about object-oriented programming, data structures, and basic algorithms, laying the foundation for advanced software development.",
-    image: java
-  },
+  }
   // Add more certifications as needed
 ];
 
@@ -103,7 +79,7 @@ const ResumeDownload = () => {
   return (
     <Button
       href={resume}
-      download="Harsha_Vivek_SDE.pdf"
+      download="BKSSSMALLIK-RESUME.pdf"
       variant="contained"
       color="primary"
       startIcon={<DownloadIcon />}
@@ -153,30 +129,45 @@ const Resume = () => {
 
 
             <div className="resume-item">
-              <h4>Front End Web Developer Intern</h4>
-              <h5>2023- Present</h5>
-              <p><em>JNTUGV College</em></p>
-              <p>Led the design and deployment of a responsive JNTUGV website using HTML5, CSS3, JavaScript, Material-UI, and React.js. Ensured a seamless user experience with 99% uptime and real-time updates, earning positive feedback from over 2,000 users.</p>
+              <h4>Web Designer and Developer(Freelance)</h4>
+              <h5>Aug 2024 - Nov 2024</h5>
+              <p><em>Incrivelsoft</em></p>
+              <p>•
+ Designed and enhanced webpages for the companyʼs website, including a blog page with 
+sections for articles, category carousels, video embeds and AI chatbot integration which 
+received excellent feedback.</p>
+              <p>•
+ Freelance web developer: Delivered a highly functional landing page for the Upaasana
+SMRITI project by seamlessly integrating Figma designs into WordPress website </p>
+              <p>•
+ Created detailed documentation on integration processes, plugin FAQs, and project 
+requirements, ensuring clarity and enabling streamlined future development and 
+collaboration.</p>
             </div>
 
             <div className="resume-item">
     <h4>Java Full Stack Intern</h4>
     <h5>2024</h5>
-    <p><em>Infosys Springboard</em></p>
-    <p>This was a 3-month project-based virtual internship where I developed full-stack applications using Java technologies. The experience enhanced my skills in both front-end and back-end development while collaborating on team projects.</p>
+    <p><em>RINL-VIZAG STEEL PLANT</em></p>
+    <p>• Designed and implemented a comprehensive system for managing machine maintenance 
+    using J2EE and Web 2.0 technologies.</p>
+    <p>• Developed key features including real-time maintenance tracking, automated alerts, and 
+    data reporting.</p>
+    <p>• Employed MySQL for database management and Apache Tomcat as the application server, 
+    ensuring reliable data handling and server-side operations.</p>
 </div>
-            <div className="resume-item">
+            {/* <div className="resume-item">
               <h4>Web Development Intern</h4>
               <h5>2024</h5>
               <p><em>Brain O Vision</em></p>
               <p>During my 2-month internship at Brain O Vision, I gained valuable experience in responsive web design and various web development tools, including Canvas, Bootstrap, and WordPress. I also completed daily assessments that helped solidify my understanding and skills.</p>
-            </div>
-            <div className="resume-item">
+            </div> */}
+            {/* <div className="resume-item">
               <h4>Front End Development Intern</h4>
               <h5>2023</h5>
               <p><em>IBM</em></p>
               <p>During my 6 weeks IBM internship, I learned React.js and Bootstrap, and gained insights into collaborative practices.</p>
-            </div>
+            </div> */}
           </div>
           <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 className="resume-title">Education</h3>
@@ -189,13 +180,13 @@ const Resume = () => {
             <div className="resume-item">
               <h4>Intermediate in MPC</h4>
               <h5>2019 - 2021</h5>
-              <p><em>Narayana Junior College, Rajahmundry</em></p>
+              <p><em>Tirumala Junior College, Visakhapatnam</em></p>
               <p>Completed an intensive curriculum in Mathematics, Physics, and Chemistry, building a strong foundation in analytical and problem-solving skills.</p>
             </div>
             <div className="resume-item">
-              <h4>High School (SSC)</h4>
+              <h4>High School (CBSE)</h4>
               <h5>2019</h5>
-              <p><em>Nagaraja Municipal High School, Rajahmundry</em></p>
+              <p><em>M.P & E.V english medium School, Visakhapatnam</em></p>
               <p>Achieved a solid academic foundation with a focus on science and mathematics, setting the stage for further studies in engineering.</p>
             </div>
           </div>
@@ -205,16 +196,22 @@ const Resume = () => {
           <h3 className="resume-title">Positions of Responsibility</h3>
           <div className="col-lg-12">
             <div className="resume-item">
-              <h4>Hour of Code Mentor</h4>
+              <h4>Team Lead</h4>
               <h5>2024</h5>
-              <p><em>ACM JNTUGV Student Chapter</em></p>
-              <p>Led the Hour of Code event during Computer Science Week, mentoring students in Python programming. Guided them through building the Rock Paper Scissors game, helping them understand programming fundamentals, logic, and code structure.</p>
+              <p><em>Smart India Hackathon 2024 Grand Finale</em></p>
+              <p>Led the team in developing the 'CertiTrack' project, focused on optimizing the issuance of certificates for the Government of NCT of Delhi.</p>
             </div>
             <div className="resume-item">
-              <h4>ReactJS Workshop Lead</h4>
+              <h4>Event Host</h4>
               <h5>2024</h5>
-              <p><em>WEBBLAZE Workshop</em></p>
-              <p> I served as a resource person for a two-day ReactJS workshop at ITYUKTA - 2K24, where I taught 150 students from 30 different colleges. I guided them through creating personal portfolio projects with hands-on experience, culminating in project deployment.</p>
+              <p><em>'Code Quest' at CRESENCE 2K24, JNTUGV CEV</em></p>
+              <p> Organized and hosted a technical event during the branch fest for the CSE department at GV College of Engineering.</p>
+            </div>
+            <div className="resume-item">
+              <h4>Student Affairs Coordinator</h4>
+              <h5>2024</h5>
+              <p><em>JNTUGV CEV</em></p>
+              <p> Coordinated student activities, managed welfare initiatives, and collaborated with administration to address student concerns.</p>
             </div>
           </div>
         </div>

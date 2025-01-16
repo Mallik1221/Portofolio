@@ -59,25 +59,25 @@ const About = () => {
            
             
               <div className="content">
-                <h3 className="content-title">Hi, I'm Androthu Harsha Vivek Gangadhar</h3>
+                <h3 className="content-title">Hi, I'm B kumara siddi satya sai mallik</h3>
                 <p className="fst-italic">
                   A web developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.
                 </p>
                 <ul className="list-unstyled">
                   <li>
                     <i className="fas fa-map-marker-alt"></i>
-                    <strong>Location:</strong> <span>Rajahmundry, India</span>
+                    <strong>Location:</strong> <span>Visakhapatnam, India</span>
                   </li>
                   <li>
                     <i className="fas fa-envelope"></i>
-                    <strong>Email:</strong> <span> <a href="mailto:hvgnani79813@gmail.com?subject=Regarding Your Portfolio&body=Hello Harsha, I just went through your portfolio and would like to connect with you.">
-      hvgnani79813@gmail.com
+                    <strong>Email:</strong> <span> <a href="mailto:satyamallik2112@gmail.com?subject=Regarding Your Portfolio&body=Hello Mallik, I just went through your portfolio and would like to connect with you.">
+                    satyamallik2112@gmail.com
     </a>
                     </span>
                   </li>
                   <li>
                     <i className="fas fa-phone"></i>
-                    <strong>Phone:</strong> <span><a href="tel:+919550617522">+91 9550617522</a>
+                    <strong>Phone:</strong> <span><a href="tel:+919390546488">+91 9390546488</a>
                     </span>
                   </li>
                   <li>
@@ -91,7 +91,7 @@ const About = () => {
                   </li>
                   <li>
                   <i class="fa-brands fa-square-github"></i>
-                    <strong>Github:</strong> <span><a href="https://github.com/HarshaAndrothu3">HarshaAndrothu3</a></span>
+                    <strong>Github:</strong> <span><a href="https://github.com/Mallik1221">Mallik1221</a></span>
                   </li>
                 </ul>
                 <p className="fst-matter">

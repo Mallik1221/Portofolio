@@ -9,6 +9,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './PortfolioDetailsHeader.css'; // Use the provided styles here
 
+import CertiTrack from "../assets/img/Certitrack.jpg"
+
+import Portfolio from "../assets/img/personalportfolio.jpg";
+
+import powerfit from "../assets/img/powerfit.jpg";
+
 import jntugv1 from "../assets/img/jntugv1.png"
 import jntugv2 from "../assets/img/jntugv2.png"
 import jntugv3 from "../assets/img/jntugv3.png"
@@ -33,75 +39,45 @@ import Button from '@mui/material/Button';
 
 // Mock data for demonstration
 const projectData = { 
-    "jntugv-website": {
-      title: "JNTUGV Website",
-      description: `Developed and deployed the official website for Jawaharlal Nehru Technological University Gurajada Vizianagaram (JNTUGV). 
-      The website acts as a comprehensive digital platform, offering university-related details such as academic information, notifications, and event updates. 
-      This project was a collaborative effort where I led the front-end development, ensuring an intuitive user experience and responsive design.`,
+    "SIH-website": {
+      title: "CertiTrack - Real-time Monitoring and Resource Allocation for Certificate Issuance",
+      description: `CertiTrack is a project developed for the Smart India Hackathon 2024 Grand Finale, addressing the challenge of optimizing the issuance of caste and other certificates by the Revenue Department of NCT of Delhi. The system focuses on enhancing efficiency, streamlining processes, and ensuring real-time tracking of certificate issuance. The project features a real-time monitoring dashboard that allows for better resource allocation, automated alerts, and load balancing. CertiTrack aims to minimize bottlenecks, reduce delays, and improve transparency in the certificate issuance workflow.`,
       features: [
-        "User-friendly navigation for university details and notifications.",
-        "Responsive design for seamless access across devices.",
-        "Collaborative effort with the backend team to deliver a robust system."
+        
+        "Real-time monitoring to capture and track data effectively.",
+        "Centralized dashboards with role-based access for VROs, RIs, and MROs.",
+        "Automated notifications for pending tasks, ensuring timely follow-ups.",
+        "Dynamic load balancing for equitable task distribution."
       ],
-      techStack: ["ReactJS", "Material-UI", "Node.js", "MySQL"],
-      images: [jntugv1, jntugv2, jntugv3], // Replace with actual paths
-      liveLink: "https://jntugv.edu.in",
-    },
-    "issue-tracking-system": {
-      title: "Issue Tracking System",
-      description: `The Issue Tracking System is a full-stack Java web application designed to streamline the process of logging, managing, 
-      and resolving issues in an organizational or project environment. It provides a centralized platform for tracking issue progress 
-      and assigning responsibilities, ensuring efficient task management and resolution.`,
-      features: [
-        "Centralized issue logging and management.",
-        "Role-based issue assignment and monitoring.",
-        "Detailed tracking and resolution progress dashboard."
-      ],
-      techStack: ["Java Servlets", "JSP", "JDBC", "MySQL"],
-      images: [issue1, issue2, issue3], // Replace with actual paths
+      techStack: ["ReactJS", "Tailwindcss", "Node.js",,"Express.js", "PostgreSQL","Prisma "],
+      images: [CertiTrack], // Replace with actual paths
       liveLink: null,
     },
-    "resucraft": {
-      title: "ResuCraft/ResuMate",
-     "description": `ResuCraft (also known as ResuMate) is a collaborative web application project designed to simplify the process of creating professional resumes. 
-  As a frontend developer on the team, I contributed to building the user interface and interactive components of the application. 
-  The platform allows users to select templates, input their details, and generate polished resumes in PDF format, all in a few simple steps.`,
-      features: [
-        "Customizable templates for personalized resumes.",
-        "Easy-to-use input fields for quick data entry.",
-        "PDF generation for offline use and sharing."
-      ],
-      techStack: ["ReactJS", "Django", "HTML5", "CSS3"],
-      images: [resucraft1, resucraft3, resucraft2], // Replace with actual paths
-      liveLink: "https://resucraft.vercel.app",
-    },
     "portfolio": {
-      title: "Portfolio",
-      description: `  An interactive and visually appealing portfolio website created to showcase my skills, projects, and professional experiences as a front-end developer. 
-      This portfolio acts as a digital resume and networking tool for potential employers and collaborators.
-`,
+      title: "Personal Portfolio",
+      description: `An interactive and visually appealing portfolio website created to showcase my skills, projects, and professional experiences as a front-end developer.`,
       features: [
         "Visually appealing and responsive layout.",
         "Sections for skills, projects, and contact information.",
         "Optimized for performance and accessibility."
       ],
-      techStack: ["ReactJS", "Material-UI", "HTML5", "CSS3"],
-      images: [portfolio1, portfolio2, portfolio3], // Replace with actual paths
-      liveLink: "https://harsha-vivek03.github.io/personalportfolio",
-    },
-    "E-library": {
-      title: "E-Library",
-      description: `The E-Library project is a sample front-end application developed to simulate the management of library books. 
-      This project was part of my learning journey in HTML and CSS and demonstrates my ability to design a clean and functional user interface.`,
-      features: [
-        "Simulated book browsing, borrowing, and returning functionalities.",
-        "Interactive design for a better user experience.",
-        "Created as a learning project using HTML and CSS."
-      ],
-      techStack: ["HTML5", "CSS3"],
-      images: [library1, library2, library3], // Replace with actual paths
+      techStack: ["HTML5", "CSS3", "Javascript","BootStrap"],
+      images: [Portfolio], // Replace with actual paths
       liveLink: null,
     },
+    "Gym-landing-page": {
+      title: "PowerFit - Gym Landing Page",
+     "description": `PowerFit is a modern and responsive gym landing page designed to attract fitness enthusiasts and promote gym services effectively. The page features a sleek UI with an engaging layout, showcasing gym facilities, membership plans, customer reviews, and contact details. The goal is to provide an intuitive user experience while emphasizing the benefits of joining PowerFit.`,
+      features: [
+        "Home Section – Eye-catching hero section with a motivational gym banner and CTA (Call-To-Action) button for membership sign-ups.",
+        "Services Section – Highlights different fitness programs, including weight training, cardio, personal training, and group workouts.",
+        "Pricing Section – Displays membership plans with pricing tiers and benefits to help users choose the right plan.",
+        "Reviews – Customer testimonials for credibility."
+      ],
+      techStack: ["HTML5", "CSS3", "Javascript","BootStrap"],
+      images: [powerfit], // Replace with actual paths
+      liveLink: null,
+    }
   };
   
 
@@ -121,7 +97,7 @@ function PortfolioDetailsHeader() {
     <header className="header1 header d-flex align-items-center sticky-top justify-content-around">
       <div className="container-fluid d-flex align-items-center justify-content-between ">
         <Link to="/" className="logo" onClick={closeMenu}>
-          <h1 className="sitenames">Harsha</h1>
+          <h1 className="sitenames">Mallik</h1>
         </Link>
         <nav className={`navmenu ${menuOpen ? 'open' : ''}`}>
           <ul>
@@ -139,11 +115,12 @@ function PortfolioDetailsHeader() {
           <i className={`bi ${menuOpen ? 'bi-x' : 'bi-list'}`}></i>
         </button>
         <div className="header-social-links">
-        <a href="https://x.com/" className="twitter"><i className="bi bi-twitter"></i></a>
-          <a href="https://www.facebook.com/harshavivek.nani?mibextid=ZbWKwL" className="facebook"><i className="bi bi-facebook"></i></a>
-          <a href="https://github.com/Harsha-vivek03" className="github"><i class="fa-brands fa-github"></i></a>
+        {/* <a href="https://x.com/" className="twitter"><i className="bi bi-twitter"></i></a> */}
+          <a href="https://www.facebook.com/profile.php?id=100041112729671" className="facebook"><i className="bi bi-facebook"></i></a>
+          <a href="https://github.com/Mallik1221" className="github"><i class="fa-brands fa-github"></i></a>
           
-          <a href="https://www.linkedin.com/in/harsha-vivek-a47309243" className="linkedin"><i className="bi bi-linkedin"></i></a>
+          <a href="
+          " className="linkedin"><i className="bi bi-linkedin"></i></a>
        
         </div>
       </div>

@@ -8,7 +8,7 @@ import Resume from './Resume';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
 import Header from './Header';
-import harsha1 from '../assets/img/resume_pic.png';
+import mallik from '../assets/img/MypicUpdated.png';
 
 import React from "react";
 
@@ -17,8 +17,8 @@ import React from "react";
 
 const Hero = () => {
   const [activeSection, setActiveSection] = useState('');
-  const phoneNumber = "+919550617522"; 
-  const defaultMessage = "Hello Harsha! I just went through your portfolio and I'd like to connect with you."; 
+  const phoneNumber = "+919390546488"; 
+  const defaultMessage = "Hello Mallik! I just went through your portfolio and I'd like to connect with you."; 
   const whatsAppLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -498,12 +498,14 @@ const Hero = () => {
             <div className="col-lg-8">
             <div className="image-logo">
               <img
-                src={harsha1}
+                src={mallik
+                  
+                }
                 alt="About"
                 className="img-fluid"
               />
             </div>
-              <h2>Harsha Vivek Gangadhar</h2>
+              <h2>B kumara siddi satya sai mallik</h2>
               <p>I'm a Full Stack Developer</p>
               <Link onClick={() => scrollToSection('about')} className="card btn-get-started">
                 Explore Me
