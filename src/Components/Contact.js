@@ -33,7 +33,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_6uo4vtl', 'template_s6u58sa', formRef.current, 'sBgRu32h1r2Lxf7ps')
+    emailjs.sendForm('service_idffv7s', 'template_m0qw49q', formRef.current, 'e4HgT1jXbsGvpfUJg')
       .then((result) => {
         alert("Thank you for visiting my profile, I will reach you soon 🤗");
         formRef.current.reset();
