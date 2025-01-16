@@ -12,15 +12,31 @@ function TextControlsExample({ formRef, handleSubmit }) {
     <Form ref={formRef} onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Name</Form.Label>
-        <Form.Control type="text" name="user_name" placeholder="Enter your name" required />
+        <Form.Control 
+          type="text" 
+          name="user_name" 
+          placeholder="Enter your name" 
+          required 
+        />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" name="user_email" placeholder="example@gmail.com" required />
+        <Form.Control 
+          type="email" 
+          name="user_email" 
+          placeholder="example@gmail.com" 
+          required 
+        />
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
         <Form.Label>Message</Form.Label>
-        <Form.Control as="textarea" name="message" rows={3} placeholder="Write something" required />
+        <Form.Control 
+          as="textarea" 
+          name="message" 
+          rows={3} 
+          placeholder="Write something" 
+          required 
+        />
       </Form.Group>
       <Button variant="primary" type="submit">Send Message</Button>
     </Form>
@@ -29,6 +45,8 @@ function TextControlsExample({ formRef, handleSubmit }) {
 
 const Contact = () => {
   const formRef = useRef();
+  
+  // State to handle form data
   const [formData, setFormData] = useState({
     user_name: '',
     user_email: '',
@@ -36,21 +54,21 @@ const Contact = () => {
   });
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevData => ({
-      ...prevData,
-      [name]: value
-    }));
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Setting the template params from the formData state
+    // Setting up template params to send email via EmailJS
     const templateParams = {
       user_name: formData.user_name,
       user_email: formData.user_email,
-      message: formData.message
+      message: formData.message,
+      to_email: formData.user_email, // This will dynamically send the message to the email provided by the user
     };
 
     emailjs.sendForm('service_idffv7s', 'template_m0qw49q', formRef.current, 'e4HgT1jXbsGvpfUJg')
@@ -83,9 +101,15 @@ const Contact = () => {
           <p>Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you. Simply fill the form and send me an email.</p>
           <p>You can also reach me through...</p>
           <br />
-          <a href="https://www.facebook.com/profile.php?id=100041112729671"><FontAwesomeIcon className="icons" icon={faSquareFacebook} /></a>
-          <a href="https://www.linkedin.com/in/bksssmallik"><FontAwesomeIcon className="icons" icon={faLinkedin} /></a>
-          <a href="https://github.com/Mallik1221"><FontAwesomeIcon className="icons" icon={faSquareGithub} /></a>
+          <a href="https://www.facebook.com/profile.php?id=100041112729671">
+            <FontAwesomeIcon className="icons" icon={faSquareFacebook} />
+          </a>
+          <a href="https://www.linkedin.com/in/bksssmallik">
+            <FontAwesomeIcon className="icons" icon={faLinkedin} />
+          </a>
+          <a href="https://github.com/Mallik1221">
+            <FontAwesomeIcon className="icons" icon={faSquareGithub} />
+          </a>
         </div>
       </div>
     </div>
